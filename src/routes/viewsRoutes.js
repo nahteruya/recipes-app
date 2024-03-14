@@ -7,4 +7,8 @@ router.get('/', getAllRecipes);
 
 router.get('/receitas/:id', getSpecificRecipe);
 
+router.get('/receitas', (req, res) => {
+  res.render('newRecipe');
+});
+
 module.exports = router;

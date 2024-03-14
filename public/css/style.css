@@ -79,3 +79,73 @@ a {
   height: 100px;
   overflow: hidden;
 }
+
+.pageContent .container .floatingButton {
+  width: 60px;
+  height: 60px;
+  background-color: #EE3E54;
+  box-shadow: 4px 4px 4px 0px rgba(0,0,0,0.2);
+  border-radius: 30px;
+  position: fixed;
+  bottom: 60px;
+  right: 60px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.form {
+  align-self: center;
+  width: 45%;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.form div {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.form div input {
+  width: 100%;
+  height: 40px;
+  border-radius: 20px;
+  border: 2px solid #CACACA;
+  padding: 2px 8px;
+  font-family: "Quicksand", sans-serif;
+  font-size: 16px;
+}
+
+.form div textarea {
+  width: 100%;
+  height: 150px;
+  border-radius: 20px;
+  border: 2px solid #CACACA;
+  resize: vertical;
+  padding: 8px;
+  font-family: "Quicksand", sans-serif;
+  font-size: 16px;
+}
+
+.ingredientsField .ingredientInput,
+.methodsField .methodInput,
+.prepTimeField .prepTimeInput {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.ingredientInput select {
+  height: 45px;
+  border-radius: 20px;
+  border: 2px solid #CACACA;
+  padding: 2px 8px;
+  font-family: "Quicksand", sans-serif;
+  font-size: 16px;
+}

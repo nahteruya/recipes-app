@@ -33,9 +33,23 @@ const getSpecificRecipe = async (req,res) => {
       ...recipe,
       ingredients
     }
-    res.render('recipe', { currentRecipe });
+    res.render('viewRecipe', { currentRecipe });
   } catch(err) {
     res.status(500).send(err.message)
+  }
+}
+
+const createRecipe = async (req,res) => {
+  const { title, ingredients, methods, prepTime, photo, description } = req.body;
+  try {
+    const recipe = await prisma.recipe.create({ data: { title, methods, prepTime, photo, description } })
+    const ingredientPromises = ingredients.map(async (ingredient) => {
+      return await prisma.ingredient.create({ data: { ...ingredient, recipe: { connect: { id: recipe.id } } } })
+    })
+    Promise.all(ingredientPromises)
+    
+  } catch (err) {
+    res.status(500).send(err.message);
   }
 }
 
