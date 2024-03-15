@@ -115,7 +115,7 @@ a {
   height: 40px;
   border-radius: 20px;
   border: 2px solid #CACACA;
-  padding: 2px 8px;
+  padding: 2px 16px;
   font-family: "Quicksand", sans-serif;
   font-size: 16px;
 }
@@ -126,19 +126,24 @@ a {
   border-radius: 20px;
   border: 2px solid #CACACA;
   resize: vertical;
-  padding: 8px;
+  padding: 16px;
   font-family: "Quicksand", sans-serif;
   font-size: 16px;
 }
 
-.ingredientsField .ingredientInput,
-.methodsField .methodInput,
-.prepTimeField .prepTimeInput {
+.ingredientsFields .ingredientInput,
+.methodsFields .methodInput,
+.divPrepTime .prepTimeInput {
   width: 100%;
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
+}
+
+.divIngredients span,
+.divMethods span {
+  cursor: pointer;
 }
 
 .ingredientInput select {
@@ -148,4 +153,18 @@ a {
   padding: 2px 8px;
   font-family: "Quicksand", sans-serif;
   font-size: 16px;
+}
+
+.primary-button {
+  width: 150px;
+  height: 40px;
+  background-color: #EE3E54;
+  font-family: "Quicksand", sans-serif;
+  font-size: 16px;
+  color: #FFFFFF;
+  border: none;
+  border-radius: 20px;
+  align-self: center;
+  margin-top: 16px;
+  cursor: pointer;
 }

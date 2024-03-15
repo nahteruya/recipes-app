@@ -18,57 +18,62 @@
   <div class="pageContent">
     <div class="container">
       <div class="form">
-        <div class="titleField">
+        <div class="divTitle">
           <label for="title">Título:</label>
           <input type="text" name="title" id="title">
         </div>
-        <div class="descriptionField">
+        <div class="divDescription">
           <label for="description">Descrição:</label>
           <textarea name="description" id="description" cols="30" rows="10"></textarea>
         </div>
-        <div class="ingredientsField">
+        <div class="divIngredients">
           <label>Ingredientes</label>
-          <div class="ingredientInput" id="ingredient-1">
-            <input type="number" name="amount" id="amount-ingredient-1" step="0.1">
-            <select name="measurement" id="measurement-ingredient-1">
-              <option value="milliliter">mL</option>
-              <option value="liter">L</option>
-              <option value="gram">g</option>
-              <option value="kilogram">kg</option>
-              <option value="tea-cup">xícara de chá</option>
-              <option value="american-cup">copo-americano</option>
-              <option value="teaspoon">colher de chá</option>
-              <option value="coffee-spoon">colher de café</option>
-              <option value="pinch">pitada</option>
-            </select>
-            <input type="text" name="ingredient" id="name-ingredient-1">
-            <span class="material-symbols-outlined">delete</span>
+          <div class="ingredientsFields">
+            <div class="ingredientInput" id="ingredient1">
+              <input type="number" name="amount" id="amount-ingredient-1" step="0.1">
+              <select name="measurement" id="measurement-ingredient-1">
+                <option value="milliliter">mL</option>
+                <option value="liter">L</option>
+                <option value="gram">g</option>
+                <option value="kilogram">kg</option>
+                <option value="tea-cup">xícara de chá</option>
+                <option value="american-cup">copo-americano</option>
+                <option value="teaspoon">colher de chá</option>
+                <option value="coffee-spoon">colher de café</option>
+                <option value="pinch">pitada</option>
+              </select>
+              <input type="text" name="ingredient" id="name-ingredient-1">
+              <span class="material-symbols-outlined trash-icon" id="trash-icon-ingredient1">delete</span>
+            </div>
           </div>
-          <span class="material-symbols-outlined" style="text-align: center;">add_circle</span>
+          <span class="material-symbols-outlined" id="plus-icon-ingredients" style="text-align: center;">add_circle</span>
         </div>
-        <div class="methodsField">
+        <div class="divMethods">
           <label for="methods">Modo de preparo</label>
-          <div class="methodInput">
-            1.
-            <input type="text" name="step1" id="step1">
+          <div class="methodsFields">
+            <div class="methodInput">
+              1.
+              <input type="text" name="step1" id="step1">
+            </div>
           </div>
-          <span class="material-symbols-outlined" style="text-align: center;">add_circle</span>
+          <span class="material-symbols-outlined" id="plus-icon-methods" style="text-align: center;">add_circle</span>
         </div>
-        <div class="prepTimeField">
+        <div class="divPrepTime">
           <label for="prepTime">Tempo de preparo:</label>
           <div class="prepTimeInput">
             <input type="number" name="prepTime" id="prepTime" step="1"> minutos
           </div>
         </div>
-        <div class="photoField">
+        <div class="divPhoto">
           <label for="photo">Foto</label>
           <div class="photoInput">
             <input type="file" name="photo" id="photo">
           </div>
         </div>
-        <button>Criar</button>
+        <button class="primary-button">Criar</button>
       </div>
     </div>
   </div>
+  <script src="/js/newRecipe.js"></script>
 </body>
 </html>
