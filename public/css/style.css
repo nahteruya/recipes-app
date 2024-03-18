@@ -14,6 +14,10 @@ a {
   color: #000000;
 }
 
+ol {
+  list-style-type: decimal;
+}
+
 .header {
   width: 100%;
   max-height: 80px;
@@ -76,9 +80,54 @@ a {
 
 .pageContent .container .recipeImage {
   width: 100%;
-  height: 100px;
+  height: 500px;
   overflow: hidden;
 }
+
+.container .title {
+  font-size: 40px;
+  align-self: center;
+  margin: 24px 0 16px;
+}
+
+.container .description {
+  width: 70%;
+  font-size: 20px;
+  align-self: center;
+  text-align: center;
+}
+
+.container .prepTime {
+  display: flex;
+  align-self: center;
+  gap: 4px;
+  margin: 16px 0;
+  align-items: center;
+}
+
+.container .prepTime p {
+  font-size: 16px;
+}
+
+.container .prepTime span {
+  font-weight: 600;
+}
+
+.container .subtitle {
+  font-size: 25px;
+  margin: 24px 0 16px;
+}
+
+.container .ingredientsList,
+.container .stepsList {
+  font-size: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-left: 24px;
+}
+
+
 
 .pageContent .container .floatingButton {
   width: 60px;

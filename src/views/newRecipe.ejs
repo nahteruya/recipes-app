@@ -43,7 +43,7 @@
                 <option value="pinch">pitada</option>
               </select>
               <input type="text" name="ingredient" id="name-ingredient-1">
-              <span class="material-symbols-outlined trash-icon" id="trash-icon-ingredient1">delete</span>
+              <span class="material-symbols-outlined" id="trash-icon-ingredient1" onclick="deleteIngredient(event)">delete</span>
             </div>
           </div>
           <span class="material-symbols-outlined" id="plus-icon-ingredients" style="text-align: center;">add_circle</span>
@@ -52,8 +52,9 @@
           <label for="methods">Modo de preparo</label>
           <div class="methodsFields">
             <div class="methodInput">
-              1.
+              1. 
               <input type="text" name="step1" id="step1">
+              <span class="material-symbols-outlined" id="trash-icon-step1" onClick="deleteStep(event)">delete</span>
             </div>
           </div>
           <span class="material-symbols-outlined" id="plus-icon-methods" style="text-align: center;">add_circle</span>
@@ -67,10 +68,10 @@
         <div class="divPhoto">
           <label for="photo">Foto</label>
           <div class="photoInput">
-            <input type="file" name="photo" id="photo">
+            <input type="text" name="photo" id="photo">
           </div>
         </div>
-        <button class="primary-button">Criar</button>
+        <button class="primary-button" id="createBtn">Criar</button>
       </div>
     </div>
   </div>
